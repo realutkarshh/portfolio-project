@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.dm-sans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+
+@keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+  
+  .animate-marquee-reverse {
+    animation: marquee-reverse var(--duration) linear infinite;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .dark\:from-background {
+      --tw-gradient-from: #000000;
+      --tw-gradient-to: rgb(0 0 0 / 0);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+  }
+  
+  /* Add any other necessary Tailwind classes here */
